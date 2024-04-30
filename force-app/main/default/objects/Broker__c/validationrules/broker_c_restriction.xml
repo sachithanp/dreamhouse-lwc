@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Stage_Update_On_Closed_Oppty</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(StageName) &amp;&amp; TEXT(DeliveryInstallationStatus__c) == &apos;Yet to begin&apos;</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Stage cannot be updated on closed Opportunity!</errorMessage>
+</ValidationRule>
